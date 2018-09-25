@@ -10,7 +10,7 @@ import android.widget.TextView;
 public class GameActivity extends AppCompatActivity {
 
     private TextView tv_time, tv_clicks;
-    private Button b_click, b_start;
+    private Button b_click, b_start, bonus;
 
     private CountDownTimer timer;
     private int time = 60;
@@ -26,9 +26,11 @@ public class GameActivity extends AppCompatActivity {
         tv_clicks = findViewById(R.id.tv_clicks);
         b_click = findViewById(R.id.b_click);
         b_start = findViewById(R.id.b_start);
+        bonus = findViewById(R.id.bonus);
 
         b_start.setEnabled(true);
         b_click.setEnabled(false);
+        bonus.setEnabled(false);
 
         timer = new CountDownTimer(30000, 1000) {
             @Override
